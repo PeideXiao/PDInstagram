@@ -1,0 +1,6 @@
+framework module Pods_PDInstagram {
+  umbrella header "Pods-PDInstagram-umbrella.h"
+
+  export *
+  module * { export * }
+}
