@@ -12,5 +12,11 @@ target 'PDInstagram' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+pod 'FirebaseUI/Google'
+pod 'FirebaseUI/Facebook'
+pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
+pod 'FirebaseUI/Phone'
+pod 'GoogleSignIn'
+pod 'FirebaseUI/Email'
 
 end
