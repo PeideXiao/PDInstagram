@@ -23,8 +23,8 @@ class CreateUsernameViewController: UIViewController {
         }
         let parameters = ["name": nickname,
                           "email": user.email,
-                          "image_url":"https://static01.nyt.com/images/2021/06/30/magazine/30mag-nets6/30mag-nets6-superJumbo.jpg"]
-        UserService.writeToDatabase(firUser: user, parameters: parameters as [String : Any]) { user in
+                          "icon_url":user.photoURL?.absoluteString]
+        UserService.saveUser(uid: user.uid, parameters: parameters as [String : Any]) { user in
             guard let current = user else {
                 return
             }

@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
@@ -36,6 +35,7 @@ class LoginViewController: UIViewController {
         guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else { return }
         sceneDelegate.configureInitialRootViewController()
     }
+    
 }
 
 extension LoginViewController: FUIAuthDelegate {
@@ -48,10 +48,10 @@ extension LoginViewController: FUIAuthDelegate {
         guard let result = authDataResult else { return }
         
         if let currentUser = Auth.auth().currentUser {
-            UserService.readDatabase(firUser: currentUser) { user in
+            UserService.user(uid: currentUser.uid) { user in
                 guard let current = user else {
                     print("New user")
-                    self.updateRootViewController()
+                    self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: nil)
                     return
                 }
                 print("user exists \(current.username)")

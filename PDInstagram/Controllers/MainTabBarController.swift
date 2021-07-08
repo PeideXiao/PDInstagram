@@ -25,6 +25,10 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
             photoHelper.presentActionSheet(from: self)
             photoHelper.completionHandler = {image in
                 
+                // Upload
+                PostService.create(for: image) {
+                    NotificationCenter.RefreshHomePageNotification()
+                }
             }
             return false
         }

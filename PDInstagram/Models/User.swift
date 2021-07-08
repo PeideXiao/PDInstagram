@@ -8,15 +8,16 @@
 import Foundation
 import FirebaseDatabase
 
-struct User: Codable {
+class User: Codable {
     let uid: String
     let username: String
     let email: String
-    let imageUrl: String?
+    let iconUrl: String?
+    var isFollowed: Bool = false
     
     static var current:User? {
         set {
-            guard let data = try? JSONEncoder().encode(newValue) else { return }
+            guard let data = try? JSONEncoder().encode(newValue) else { return}
             UserDefaults.standard.setValue(data, forKey: Constants.UserDefaults.currentUser)
             UserDefaults.standard.synchronize()
         }
@@ -36,6 +37,14 @@ struct User: Codable {
         self.uid = snapshot.key
         self.username = username
         self.email = email
-        self.imageUrl = dict["image_url"] as? String
+        self.iconUrl = dict["icon_url"] as? String
+    }
+    
+    
+    init(uid: String, username: String, iconUrl: String?) {
+        self.uid = uid
+        self.username = username
+        self.email = ""
+        self.iconUrl = iconUrl
     }
 }

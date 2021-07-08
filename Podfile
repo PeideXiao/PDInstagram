@@ -18,5 +18,6 @@ pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
 pod 'FirebaseUI/Phone'
 pod 'GoogleSignIn'
 pod 'FirebaseUI/Email'
+pod 'Kingfisher'
 
 end
