@@ -45,6 +45,11 @@
 		CEB749B226823AA500CFA063 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB749B126823AA500CFA063 /* CreateUsernameViewController.swift */; };
 		CEBBFB39269640D1006A4C09 /* UITableView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBFB38269640D1006A4C09 /* UITableView+Utility.swift */; };
 		CEBBFB3B26964913006A4C09 /* PDPaginationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBFB3A26964913006A4C09 /* PDPaginationHelper.swift */; };
+		CEBBFB3E269740E8006A4C09 /* GreatVibes-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEBBFB3D269740E8006A4C09 /* GreatVibes-Regular.otf */; };
+		CEBBFB4026974392006A4C09 /* UIFont+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBFB3F26974392006A4C09 /* UIFont+Utility.swift */; };
+		CEBBFB4226974568006A4C09 /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBFB4126974568006A4C09 /* UIColor+Utility.swift */; };
+		CEBBFB442698D8EE006A4C09 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBFB432698D8EE006A4C09 /* PostCell.swift */; };
+		CEBBFB462698DB49006A4C09 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBFB452698DB49006A4C09 /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +96,11 @@
 		CEB749B126823AA500CFA063 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		CEBBFB38269640D1006A4C09 /* UITableView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utility.swift"; sourceTree = "<group>"; };
 		CEBBFB3A26964913006A4C09 /* PDPaginationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDPaginationHelper.swift; sourceTree = "<group>"; };
+		CEBBFB3D269740E8006A4C09 /* GreatVibes-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.otf"; sourceTree = "<group>"; };
+		CEBBFB3F26974392006A4C09 /* UIFont+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utility.swift"; sourceTree = "<group>"; };
+		CEBBFB4126974568006A4C09 /* UIColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
+		CEBBFB432698D8EE006A4C09 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		CEBBFB452698DB49006A4C09 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,7 @@
 		CE95464A2680CD33006B1C51 /* PDInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				CEBBFB3C269740CD006A4C09 /* Resources */,
 				CE780596268277220042C860 /* PDInstagram.entitlements */,
 				CE9546642680E7DB006B1C51 /* Models */,
 				CE9546632680E7D2006B1C51 /* Views */,
@@ -155,6 +166,8 @@
 				CE77891E2684FDC700C7004A /* PostHeaderCell.swift */,
 				CE7789202684FDD800C7004A /* PostActionCell.swift */,
 				CEA1F02B268CB3750074525E /* FriendCell.swift */,
+				CEBBFB432698D8EE006A4C09 /* PostCell.swift */,
+				CEBBFB452698DB49006A4C09 /* ProfileHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +226,8 @@
 				CEA1F02E268CBA230074525E /* UIView+Crop.swift */,
 				CEA550D726900137003790E8 /* DatabaseReference+Location.swift */,
 				CEBBFB38269640D1006A4C09 /* UITableView+Utility.swift */,
+				CEBBFB3F26974392006A4C09 /* UIFont+Utility.swift */,
+				CEBBFB4126974568006A4C09 /* UIColor+Utility.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -247,6 +262,14 @@
 				CE95464D2680CD33006B1C51 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		CEBBFB3C269740CD006A4C09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEBBFB3D269740E8006A4C09 /* GreatVibes-Regular.otf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CEFB90D2E9D4C1F49C934A26 /* Pods */ = {
@@ -318,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBBFB3E269740E8006A4C09 /* GreatVibes-Regular.otf in Resources */,
 				CE9546582680CD34006B1C51 /* LaunchScreen.storyboard in Resources */,
 				CE9546622680D9A5006B1C51 /* GoogleService-Info.plist in Resources */,
 				CE9546552680CD34006B1C51 /* Assets.xcassets in Resources */,
@@ -402,16 +426,20 @@
 				CEA1F02C268CB3750074525E /* FriendCell.swift in Sources */,
 				CEB3E6692683BE620017BE24 /* MainTabBarController.swift in Sources */,
 				CE8CD84F268A7D76001E2B17 /* FindFriendsViewController.swift in Sources */,
+				CEBBFB442698D8EE006A4C09 /* PostCell.swift in Sources */,
 				CEB3E6712683F8750017BE24 /* Post.swift in Sources */,
 				CE7789212684FDD800C7004A /* PostActionCell.swift in Sources */,
 				CEB3E663268391D50017BE24 /* UserService.swift in Sources */,
 				CEBBFB3B26964913006A4C09 /* PDPaginationHelper.swift in Sources */,
+				CEBBFB4226974568006A4C09 /* UIColor+Utility.swift in Sources */,
 				CE77891D2684DA2D00C7004A /* PostImageCell.swift in Sources */,
 				CEB3E6672683A5130017BE24 /* UIStoryboard+Utility.swift in Sources */,
 				CE95464C2680CD33006B1C51 /* AppDelegate.swift in Sources */,
 				CEA550D826900137003790E8 /* DatabaseReference+Location.swift in Sources */,
 				CEB3E675268400740017BE24 /* StorageReference+Format.swift in Sources */,
+				CEBBFB4026974392006A4C09 /* UIFont+Utility.swift in Sources */,
 				CEB3E6732683FDB00017BE24 /* UIImage+Size.swift in Sources */,
+				CEBBFB462698DB49006A4C09 /* ProfileHeaderView.swift in Sources */,
 				CEBBFB39269640D1006A4C09 /* UITableView+Utility.swift in Sources */,
 				CEB3E66F2683EFAF0017BE24 /* PostService.swift in Sources */,
 				CE77891B2684D95C00C7004A /* HomeViewController.swift in Sources */,

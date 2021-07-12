@@ -63,16 +63,4 @@ extension LoginViewController: FUIAuthDelegate {
         
         print(result.user.displayName ?? "nil")
     }
-    
-    func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
-        if let error = error {
-            assertionFailure("Error signing didSignInWith in: \(error.localizedDescription)")
-            return
-        }
-        
-        guard let user = user else {return}
-        print("user: \(user)")
-    }
-    
-    
 }

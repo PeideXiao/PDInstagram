@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
     
@@ -33,5 +34,10 @@ struct Constants {
         static let postHeaderCell = "postheadercell"
         static let postActionCell = "postactioncell"
         static let friendCell = "friendcell"
+    }
+    
+    struct Screen {
+        static let WIDTH = UIScreen.main.bounds.width
+        static let HEIGHT = UIScreen.main.bounds.height
     }
 }

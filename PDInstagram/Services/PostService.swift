@@ -31,6 +31,7 @@ struct PostService {
             completionHandler()
             return
         }
+                
         
         
         UserService.followers(user: user) { followers in
@@ -49,6 +50,15 @@ struct PostService {
                     assertionFailure(error.localizedDescription)
                     return
                 }
+                
+                let postCountRef = DatabaseReference.toLocation(.user(user.uid)).child("post_count")
+                
+                postCountRef.runTransactionBlock { mutableData -> TransactionResult in
+                     let currentCount = mutableData.value as? Int ?? 0
+                    mutableData.value = currentCount + 1
+                    return TransactionResult.success(withValue: mutableData)
+                }
+                
                 completionHandler()
             }
         }

@@ -27,6 +27,43 @@ struct FollowService {
                 return
             }
             
+            let group = DispatchGroup()
+            
+            let followCountRef = DatabaseReference.toLocation(.user(currentUser.uid)).child("follower_count")
+            let followingCountRef = DatabaseReference.toLocation(.user(user.uid)).child("following_count")
+            
+            group.enter()
+            followCountRef.runTransactionBlock { mutableData -> TransactionResult in
+                
+                let count = mutableData.value as? Int ?? 0
+                mutableData.value = count + 1
+                return TransactionResult.success(withValue: mutableData)
+            } andCompletionBlock: { error, _, _ in
+                if let error = error {
+                    assertionFailure(error.localizedDescription)
+                }
+                
+                group.leave()
+            }
+            
+            
+            
+            group.enter()
+            followingCountRef.runTransactionBlock { mutableData -> TransactionResult in
+                let count = mutableData.value as? Int ?? 0
+                mutableData.value = count + 1
+                return TransactionResult.success(withValue: mutableData)
+                
+            } andCompletionBlock: { error, _, _ in
+                if let error = error {
+                    assertionFailure(error.localizedDescription)
+                }
+                group.leave()
+            }
+            
+            
+            
+            group.enter()
             var updatedData: [String: Any] = [:]
             UserService.posts(uid: user.uid) { posts in
                 posts.forEach { post in
@@ -38,8 +75,12 @@ struct FollowService {
                         assertionFailure(error.localizedDescription)
                     }
                     NotificationCenter.RefreshHomePageNotification()
-                    success(error == nil)
+                    group.leave()
                 })
+            }
+            
+            group.notify(queue: .main) {
+                success(true)
             }
         }
     }
@@ -61,6 +102,40 @@ struct FollowService {
                 success(false)
                 return
             }
+            
+            let group = DispatchGroup()
+            
+            let followCountRef = DatabaseReference.toLocation(.user(currentUser.uid)).child("follower_count")
+            let followingCountRef = DatabaseReference.toLocation(.user(user.uid)).child("following_count")
+            
+            group.enter()
+            followCountRef.runTransactionBlock { mutableData -> TransactionResult in
+                
+                let count = mutableData.value as? Int ?? 0
+                mutableData.value = count - 1
+                return TransactionResult.success(withValue: mutableData)
+            } andCompletionBlock: { error, _, _ in
+                if let error = error {
+                    assertionFailure(error.localizedDescription)
+                }
+                
+                group.leave()
+            }
+                        
+            group.enter()
+            followingCountRef.runTransactionBlock { mutableData -> TransactionResult in
+                let count = mutableData.value as? Int ?? 0
+                mutableData.value = count - 1
+                return TransactionResult.success(withValue: mutableData)
+                
+            } andCompletionBlock: { error, _, _ in
+                if let error = error {
+                    assertionFailure(error.localizedDescription)
+                }
+                group.leave()
+            }
+            
+            group.enter()
             var updatedData: [String: Any] = [:]
             UserService.posts(uid: user.uid) { posts in
                 posts.forEach { post in
@@ -71,9 +146,13 @@ struct FollowService {
                     if let error = error {
                         assertionFailure(error.localizedDescription)
                     }
-                    NotificationCenter.RefreshHomePageNotification()
-                    success(error == nil)
+                    group.leave()
                 })
+            }
+            
+            group.notify(queue: .main) {
+                NotificationCenter.RefreshHomePageNotification()
+                success(true)
             }
         }
     }

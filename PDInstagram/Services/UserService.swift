@@ -177,4 +177,19 @@ struct UserService {
             }
         }
     }
+    
+    static func observeProfile(_ user: User, _ completion: @escaping(DatabaseReference, User?, [Post])-> Void) {
+        let ref = DatabaseReference.toLocation(.user(user.uid))
+        
+        ref.observe(DataEventType.value) { snapshot in
+            guard let user = User(snapshot: snapshot) else {
+                completion(ref, nil, [])
+                return
+            }
+            
+            posts(uid: user.uid) { posts in
+                completion(ref, user, posts)
+            }
+        }
+    }
 }

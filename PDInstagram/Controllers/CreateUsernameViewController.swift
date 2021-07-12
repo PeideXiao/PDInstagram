@@ -21,9 +21,13 @@ class CreateUsernameViewController: UIViewController {
         guard let user = Auth.auth().currentUser, let nickname = self.usernameTF.text, !nickname.isEmpty else {
             return
         }
-        let parameters = ["name": nickname,
-                          "email": user.email,
-                          "icon_url":user.photoURL?.absoluteString]
+        let parameters:[String: Any] = ["name": nickname,
+                                        "email": user.email,
+                                        "icon_url":user.photoURL?.absoluteString,
+                                        "post_count": 0,
+                                        "follower_count": 0,
+                                        "following_count":0 ]
+        
         UserService.saveUser(uid: user.uid, parameters: parameters as [String : Any]) { user in
             guard let current = user else {
                 return

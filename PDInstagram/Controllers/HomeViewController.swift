@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         reloadTimeline()
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -142,6 +143,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             cell.likeButton.isSelected = post.isLiked
             cell.likeLabel.text = "\(post.likeCount) likes"
             cell.dateLabel.text = self.dateFormatter.string(from: post.creationDate)
+            cell.dateLabel.font = UIFont(name: "GreatVibes-Regular", size: 13)
             return cell
         }
     }
