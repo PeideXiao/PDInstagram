@@ -164,7 +164,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.section >= self.posts.count - 1 {
             paginationHelper.paginate(completion: { [unowned self] (posts) in
                 self.posts.append(contentsOf: posts)
-                
                 DispatchQueue.main.async {
                     self.postTableView.reloadData()
                 }

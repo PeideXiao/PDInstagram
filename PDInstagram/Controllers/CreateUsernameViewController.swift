@@ -22,8 +22,8 @@ class CreateUsernameViewController: UIViewController {
             return
         }
         let parameters:[String: Any] = ["name": nickname,
-                                        "email": user.email,
-                                        "icon_url":user.photoURL?.absoluteString,
+                                        "email": user.email ?? "test@gmail.com",
+                                        "icon_url":user.photoURL?.absoluteString ?? "",
                                         "post_count": 0,
                                         "follower_count": 0,
                                         "following_count":0 ]

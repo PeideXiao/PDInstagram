@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+enum FontWeightStyle: String {
+    case Regular = "Regular"
+    case Medium = "Medium"
+    case Bold = "Bold"
+}
+
 extension UIFont {
     static func printFontName() {
         for family: String in UIFont.familyNames {
@@ -22,5 +28,10 @@ extension UIFont {
     
     static var myRegular: UIFont {
         return UIFont(name: "GreatVibes-Regular", size: 13)!
+    }
+    
+    
+    static func AvenirNext(weight style:FontWeightStyle, _ size: CGFloat)-> UIFont {
+        return UIFont(name: "AvenirNext-\(style.rawValue)", size: size)!
     }
 }
