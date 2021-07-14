@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         reloadTimeline()
-    
+        review()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,7 +76,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
     func reloadTimeline() {
         self.refreshControl.beginRefreshing()
         self.paginationHelper.reloadData(completion: { [unowned self] (posts) in
@@ -89,7 +88,6 @@ class HomeViewController: UIViewController {
             self.postTableView.reloadData()
         })
     }
-    
     
     private func configureUI() {
         postTableView.separatorStyle = .none
@@ -108,7 +106,6 @@ class HomeViewController: UIViewController {
     }
     
 }
-
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {

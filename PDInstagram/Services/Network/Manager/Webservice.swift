@@ -9,14 +9,37 @@
 import UIKit
 
 struct Webservice {
+    
+    public enum NetworkEnvironment {
+        case qa
+        case production
+        case staging
+        
+        var baseURL: String {
+            switch self {
+            case .production: return "https://vtapi.voicetube.com"
+            case .qa: return ""
+            case .staging:  return ""
+            }
+        }
+    }
+
+
     static let sharedInstance: Webservice = Webservice();
     static let enviroment: NetworkEnvironment = .production
     
     
-    private let videoRouter = Router<VideoAPI>();
-    private let challengeRouter = Router<ChallengeAPI>();
-    private let reviewRouter = Router<ReviewAPI>();
-    private let rankingRouter = Router<RankingAPI>();
+    private let videoRouter = NetworkRouter<VideoAPI>();
+    private let challengeRouter = NetworkRouter<ChallengeAPI>();
+    private let reviewRouter = NetworkRouter<ReviewAPI>();
+    private let rankingRouter = NetworkRouter<RankingAPI>();
+    
+    
+    
+    static var baseURL: URL {
+        guard let url = URL(string: enviroment.baseURL) else { fatalError("BaseURL could not be configured.") }
+        return url
+    }
     
     // ============================================================================
     // MARK: - Videos

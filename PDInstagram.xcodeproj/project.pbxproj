@@ -38,6 +38,7 @@
 		CE8D452C269C92440052E057 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D4528269C923E0052E057 /* BaseViewController.swift */; };
 		CE8D452D269C92470052E057 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D452A269C923E0052E057 /* BaseNavigationController.swift */; };
 		CE8D452E269C924A0052E057 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D4529269C923E0052E057 /* BaseTableViewController.swift */; };
+		CE8D4533269CADFF0052E057 /* UserDefaults+Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D4532269CADFF0052E057 /* UserDefaults+Storage.swift */; };
 		CE95464C2680CD33006B1C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95464B2680CD33006B1C51 /* AppDelegate.swift */; };
 		CE95464E2680CD33006B1C51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95464D2680CD33006B1C51 /* SceneDelegate.swift */; };
 		CE9546532680CD33006B1C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9546512680CD33006B1C51 /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		CEBBFB4226974568006A4C09 /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBFB4126974568006A4C09 /* UIColor+Utility.swift */; };
 		CEBBFB442698D8EE006A4C09 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBFB432698D8EE006A4C09 /* PostCell.swift */; };
 		CEBBFB462698DB49006A4C09 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBFB452698DB49006A4C09 /* ProfileHeaderView.swift */; };
+		CECAFF15269DD23700A724C5 /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAFF14269DD23700A724C5 /* ReviewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +111,7 @@
 		CE8D4528269C923E0052E057 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE8D4529269C923E0052E057 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		CE8D452A269C923E0052E057 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		CE8D4532269CADFF0052E057 /* UserDefaults+Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Storage.swift"; sourceTree = "<group>"; };
 		CE9546482680CD33006B1C51 /* PDInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE95464B2680CD33006B1C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE95464D2680CD33006B1C51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 		CEBBFB4126974568006A4C09 /* UIColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
 		CEBBFB432698D8EE006A4C09 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		CEBBFB452698DB49006A4C09 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		CECAFF14269DD23700A724C5 /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +295,7 @@
 				CEB749B126823AA500CFA063 /* CreateUsernameViewController.swift */,
 				CEB3E6682683BE620017BE24 /* MainTabBarController.swift */,
 				CE77891A2684D95C00C7004A /* HomeViewController.swift */,
+				CECAFF14269DD23700A724C5 /* ReviewController.swift */,
 				CE8CD84C268A7CAC001E2B17 /* ProfileViewController.swift */,
 				CE8CD84E268A7D76001E2B17 /* FindFriendsViewController.swift */,
 			);
@@ -338,6 +343,7 @@
 				CE8D4520269C84400052E057 /* FileManager+Utility.swift */,
 				CE8D4522269C85EE0052E057 /* UIViewController+HUD.swift */,
 				CE8D4524269C8FED0052E057 /* Dictionary+Utility.swift */,
+				CE8D4532269CADFF0052E057 /* UserDefaults+Storage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -529,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8D4533269CADFF0052E057 /* UserDefaults+Storage.swift in Sources */,
 				CE8D4525269C8FED0052E057 /* Dictionary+Utility.swift in Sources */,
 				CE8CD84B268A4E22001E2B17 /* FollowService.swift in Sources */,
 				CE8D451D269C82020052E057 /* Date+Formatter.swift in Sources */,
@@ -568,6 +575,7 @@
 				CE8D4516269C7EC20052E057 /* ReviewAPI.swift in Sources */,
 				CE8D452B269C92420052E057 /* BaseTabBarController.swift in Sources */,
 				CEBBFB39269640D1006A4C09 /* UITableView+Utility.swift in Sources */,
+				CECAFF15269DD23700A724C5 /* ReviewController.swift in Sources */,
 				CEB3E66F2683EFAF0017BE24 /* PostService.swift in Sources */,
 				CE77891B2684D95C00C7004A /* HomeViewController.swift in Sources */,
 				CE8CD84D268A7CAC001E2B17 /* ProfileViewController.swift in Sources */,

@@ -8,41 +8,14 @@
 
 import UIKit
 
-let kBoundary = "alamofire.boundary.2f832832f886c5c1"
-
-//public typealias NetworkRouterCompletion = (_ data: Data?, _ response: URLResponse?, _ error: Error?)->()
-public enum NetworkEnvironment {
-    case qa
-    case production
-    case staging
-}
-
-fileprivate var environmentBaseURL: String {
-    switch Webservice.enviroment {
-    case .production: return "https://vtapi.voicetube.com"
-    case .qa: return ""
-    case .staging:  return ""
-    }
-}
-
-fileprivate var baseURL: URL {
-    guard let url = URL(string: environmentBaseURL) else { fatalError("BaseURL could not be configured.") }
-    return url
-}
-
-fileprivate var task: URLSessionTask?
-public typealias NetworkRouterCompletion = (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> ()
-
-protocol NetworkRouter: AnyObject {
-    associatedtype EndPoint: EndPointType
-    func request(_ router: EndPoint, completion:@escaping NetworkRouterCompletion)
-    func cancel()
-}
-
-class Router<EndPoint: EndPointType>: NetworkRouter {
-
-    public func request(_ router: EndPoint, completion: @escaping NetworkRouterCompletion) {
-        
+struct NetworkRouter<T: EndPointType> {
+    
+    let kBoundary = "alamofire.boundary.2f832832f886c5c1"
+    var task: URLSessionTask?
+    typealias NetworkRouterCompletion = (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> ()
+    
+    
+   mutating public func request(_ router: T, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
         do {
             let request = try self.buildRequest(from: router);
@@ -54,9 +27,7 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         } catch {
             completion(nil, nil, error)
         }
-        
     }
-    
     
     
     public func cancel() {
@@ -65,9 +36,9 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
     
     
     // FILEPRIVATE functions
-    fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
+    fileprivate func buildRequest(from route: T) throws -> URLRequest {
         
-        var request = URLRequest(url: baseURL.appendingPathComponent(route.path),
+        var request = URLRequest(url: Webservice.baseURL.appendingPathComponent(route.path),
                                  cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData,
                                  timeoutInterval: 10.0)
         
@@ -153,9 +124,6 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
             if let urlParameters = urlParameters {
                 try URLParameterEncoder.encode(urlRequest: &request, with: urlParameters)
             }
-            
-            
-            
         } catch {
             throw error
         }
