@@ -22,6 +22,7 @@
                         <segue destination="9DN-BS-2bt" kind="relationship" relationship="viewControllers" id="F80-qw-9d7"/>
                         <segue destination="k3j-FQ-eWP" kind="relationship" relationship="viewControllers" id="bu9-NS-fgN"/>
                         <segue destination="7lz-5H-STV" kind="relationship" relationship="viewControllers" id="l0J-fl-mIz"/>
+                        <segue destination="gtW-8i-O9C" kind="relationship" relationship="viewControllers" id="5va-DG-gO0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmY-Ol-UZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -63,6 +64,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bC-Ik-i5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="635" y="1546"/>
+        </scene>
+        <!--Facebook-->
+        <scene sceneID="GrX-xJ-4rj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Facebook" id="gtW-8i-O9C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="PxH-BQ-fDe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ga-vN-eu4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="-152"/>
         </scene>
     </scenes>
     <resources>

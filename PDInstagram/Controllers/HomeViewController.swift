@@ -27,7 +27,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         reloadTimeline()
-        review()
     }
     
     override func viewDidAppear(_ animated: Bool) {

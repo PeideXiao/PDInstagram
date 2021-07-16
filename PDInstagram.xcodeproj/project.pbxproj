@@ -14,6 +14,10 @@
 		CE77891F2684FDC700C7004A /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77891E2684FDC700C7004A /* PostHeaderCell.swift */; };
 		CE7789212684FDD800C7004A /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7789202684FDD800C7004A /* PostActionCell.swift */; };
 		CE796896268623E300527541 /* UIScreen+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE796895268623E300527541 /* UIScreen+Size.swift */; };
+		CE79B1A426A108620018CFCE /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79B1A326A108620018CFCE /* FacebookViewController.swift */; };
+		CE79B1A726A108990018CFCE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79B1A526A108990018CFCE /* ProfileView.swift */; };
+		CE79B1A826A108A10018CFCE /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE79B1A626A108990018CFCE /* ProfileView.xib */; };
+		CE79B1AA26A10C340018CFCE /* Facebook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE79B1A926A10C2E0018CFCE /* Facebook.storyboard */; };
 		CE8CD84B268A4E22001E2B17 /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD84A268A4E22001E2B17 /* FollowService.swift */; };
 		CE8CD84D268A7CAC001E2B17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD84C268A7CAC001E2B17 /* ProfileViewController.swift */; };
 		CE8CD84F268A7D76001E2B17 /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD84E268A7D76001E2B17 /* FindFriendsViewController.swift */; };
@@ -32,7 +36,7 @@
 		CE8D451D269C82020052E057 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D451C269C82020052E057 /* Date+Formatter.swift */; };
 		CE8D451F269C822C0052E057 /* UIDevice+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D451E269C822C0052E057 /* UIDevice+Utility.swift */; };
 		CE8D4521269C84400052E057 /* FileManager+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D4520269C84400052E057 /* FileManager+Utility.swift */; };
-		CE8D4523269C85EE0052E057 /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D4522269C85EE0052E057 /* UIViewController+HUD.swift */; };
+		CE8D4523269C85EE0052E057 /* UIViewController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D4522269C85EE0052E057 /* UIViewController+Utility.swift */; };
 		CE8D4525269C8FED0052E057 /* Dictionary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D4524269C8FED0052E057 /* Dictionary+Utility.swift */; };
 		CE8D452B269C92420052E057 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D4527269C923E0052E057 /* BaseTabBarController.swift */; };
 		CE8D452C269C92440052E057 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D4528269C923E0052E057 /* BaseViewController.swift */; };
@@ -86,6 +90,10 @@
 		CE7789202684FDD800C7004A /* PostActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActionCell.swift; sourceTree = "<group>"; };
 		CE780596268277220042C860 /* PDInstagram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDInstagram.entitlements; sourceTree = "<group>"; };
 		CE796895268623E300527541 /* UIScreen+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Size.swift"; sourceTree = "<group>"; };
+		CE79B1A326A108620018CFCE /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
+		CE79B1A526A108990018CFCE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CE79B1A626A108990018CFCE /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		CE79B1A926A10C2E0018CFCE /* Facebook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Facebook.storyboard; path = /Users/user/PDInstagram/PDInstagram/Storyboards/Facebook.storyboard; sourceTree = "<absolute>"; };
 		CE8CD84A268A4E22001E2B17 /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
 		CE8CD84C268A7CAC001E2B17 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE8CD84E268A7D76001E2B17 /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +113,7 @@
 		CE8D451C269C82020052E057 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		CE8D451E269C822C0052E057 /* UIDevice+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utility.swift"; sourceTree = "<group>"; };
 		CE8D4520269C84400052E057 /* FileManager+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Utility.swift"; sourceTree = "<group>"; };
-		CE8D4522269C85EE0052E057 /* UIViewController+HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
+		CE8D4522269C85EE0052E057 /* UIViewController+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utility.swift"; sourceTree = "<group>"; };
 		CE8D4524269C8FED0052E057 /* Dictionary+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utility.swift"; sourceTree = "<group>"; };
 		CE8D4527269C923E0052E057 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		CE8D4528269C923E0052E057 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +259,7 @@
 		CE95464A2680CD33006B1C51 /* PDInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				CE780596268277220042C860 /* PDInstagram.entitlements */,
 				CE9546642680E7DB006B1C51 /* Models */,
 				CE9546632680E7D2006B1C51 /* Views */,
 				CE9546652680E7E2006B1C51 /* Controllers */,
@@ -274,6 +283,8 @@
 				CEA1F02B268CB3750074525E /* FriendCell.swift */,
 				CEBBFB432698D8EE006A4C09 /* PostCell.swift */,
 				CEBBFB452698DB49006A4C09 /* ProfileHeaderView.swift */,
+				CE79B1A526A108990018CFCE /* ProfileView.swift */,
+				CE79B1A626A108990018CFCE /* ProfileView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 				CECAFF14269DD23700A724C5 /* ReviewController.swift */,
 				CE8CD84C268A7CAC001E2B17 /* ProfileViewController.swift */,
 				CE8CD84E268A7D76001E2B17 /* FindFriendsViewController.swift */,
+				CE79B1A326A108620018CFCE /* FacebookViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -341,7 +353,7 @@
 				CE8D451C269C82020052E057 /* Date+Formatter.swift */,
 				CE8D451E269C822C0052E057 /* UIDevice+Utility.swift */,
 				CE8D4520269C84400052E057 /* FileManager+Utility.swift */,
-				CE8D4522269C85EE0052E057 /* UIViewController+HUD.swift */,
+				CE8D4522269C85EE0052E057 /* UIViewController+Utility.swift */,
 				CE8D4524269C8FED0052E057 /* Dictionary+Utility.swift */,
 				CE8D4532269CADFF0052E057 /* UserDefaults+Storage.swift */,
 			);
@@ -351,7 +363,6 @@
 		CE9546692680E818006B1C51 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE780596268277220042C860 /* PDInstagram.entitlements */,
 				CEB3E6642683A3270017BE24 /* Constants.swift */,
 				CE9546542680CD34006B1C51 /* Assets.xcassets */,
 				CE9546592680CD34006B1C51 /* Info.plist */,
@@ -368,6 +379,7 @@
 				CE9546512680CD33006B1C51 /* Main.storyboard */,
 				CE9546562680CD34006B1C51 /* LaunchScreen.storyboard */,
 				CE95466C2680F92C006B1C51 /* Login.storyboard */,
+				CE79B1A926A10C2E0018CFCE /* Facebook.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -463,6 +475,8 @@
 				CE9546622680D9A5006B1C51 /* GoogleService-Info.plist in Resources */,
 				CE9546552680CD34006B1C51 /* Assets.xcassets in Resources */,
 				CE7789192684D94200C7004A /* Home.storyboard in Resources */,
+				CE79B1A826A108A10018CFCE /* ProfileView.xib in Resources */,
+				CE79B1AA26A10C340018CFCE /* Facebook.storyboard in Resources */,
 				CE95466D2680F92C006B1C51 /* Login.storyboard in Resources */,
 				CEA1F02D268CB6760074525E /* Profile.storyboard in Resources */,
 				CE9546532680CD33006B1C51 /* Main.storyboard in Resources */,
@@ -551,10 +565,12 @@
 				CE8D4514269C7EC20052E057 /* VideoAPI.swift in Sources */,
 				CE8CD84F268A7D76001E2B17 /* FindFriendsViewController.swift in Sources */,
 				CEBBFB442698D8EE006A4C09 /* PostCell.swift in Sources */,
+				CE79B1A726A108990018CFCE /* ProfileView.swift in Sources */,
 				CE8D452C269C92440052E057 /* BaseViewController.swift in Sources */,
 				CE8D451F269C822C0052E057 /* UIDevice+Utility.swift in Sources */,
 				CEB3E6712683F8750017BE24 /* Post.swift in Sources */,
 				CE7789212684FDD800C7004A /* PostActionCell.swift in Sources */,
+				CE79B1A426A108620018CFCE /* FacebookViewController.swift in Sources */,
 				CE8D4515269C7EC20052E057 /* RankingAPI.swift in Sources */,
 				CEB3E663268391D50017BE24 /* UserService.swift in Sources */,
 				CEBBFB3B26964913006A4C09 /* PDPaginationHelper.swift in Sources */,
@@ -568,7 +584,7 @@
 				CE95464C2680CD33006B1C51 /* AppDelegate.swift in Sources */,
 				CEA550D826900137003790E8 /* DatabaseReference+Location.swift in Sources */,
 				CEB3E675268400740017BE24 /* StorageReference+Format.swift in Sources */,
-				CE8D4523269C85EE0052E057 /* UIViewController+HUD.swift in Sources */,
+				CE8D4523269C85EE0052E057 /* UIViewController+Utility.swift in Sources */,
 				CEBBFB4026974392006A4C09 /* UIFont+Utility.swift in Sources */,
 				CEB3E6732683FDB00017BE24 /* UIImage+Size.swift in Sources */,
 				CEBBFB462698DB49006A4C09 /* ProfileHeaderView.swift in Sources */,

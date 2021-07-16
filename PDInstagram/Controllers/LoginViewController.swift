@@ -36,6 +36,10 @@ class LoginViewController: UIViewController {
         sceneDelegate.configureInitialRootViewController()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+       
+    }
+    
 }
 
 extension LoginViewController: FUIAuthDelegate {

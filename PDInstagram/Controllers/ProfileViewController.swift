@@ -62,8 +62,7 @@ class ProfileViewController: UIViewController {
         let spacing: CGFloat = 8.0
         let column: CGFloat = 3.0
         
-        
-        let width = (Constants.Screen.WIDTH - margin * 2 - (column - 1) * spacing) / column
+        let width = (Screen.Width - margin * 2 - (column - 1) * spacing) / column
         return CGSize(width: width, height: width)
     }
 }

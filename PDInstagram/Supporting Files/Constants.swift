@@ -35,11 +35,6 @@ struct Constants {
         static let postActionCell = "postactioncell"
         static let friendCell = "friendcell"
     }
-    
-    struct Screen {
-        static let WIDTH = UIScreen.main.bounds.width
-        static let HEIGHT = UIScreen.main.bounds.height
-    }
 }
 
 // MARK:- VoiceTube
